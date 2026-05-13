@@ -99,20 +99,37 @@ img{max-width:100%!important;height:auto!important}
   .sidebar nav,.sidebar .nav{display:block!important}
   .navbar{display:flex!important;align-items:center!important;justify-content:space-between!important}
 }
-</style></head><body>
+</style><style id="minimal-fix-v5">
+/* Sticky para navbar específicos (NO header.hero) */
+.topbar, .navbar, .header-top, .main-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1010 !important;
+}
+header.hero, .hero { position: relative !important; }
+/* Dropdowns por encima del hero */
+.dd, .has-dd .dd, .nav-item .dd {
+  z-index: 1100 !important;
+}
+/* Leaflet contained */
+.leaflet-pane { z-index: 400 !important; }
+.leaflet-control { z-index: 800 !important; }
+.leaflet-container { z-index: 1 !important; }
+</style>
+</head><body>
 
 <nav class="navbar">
     <div class="logo-area" data-logo-link="1" onclick="window.location.href=\'../\'" style="cursor:pointer;margin-right:2.5rem;flex-shrink:0">
         <div class="logo-box">GE</div>
         <div class="logo-text">Geotechnical Engineering</div></a></div>
     <div class="nav">
-        <div class="nav-item has-dd"><a href="../investigation/" class="nav-cat-link">Investigation</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../exploratory-pit/">Exploratory test pit</a><a href="../cone-penetration/">CPT (Cone Penetration Test)</a><a href="../standard-penetration/">SPT (Standard Penetration Test)</a></div></div><div class="nav-item has-dd"><a href="../in-situ-testing/" class="nav-cat-link">In-Situ Testing</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../porchet-double-ring-infiltrometer/">Infiltration test (Porchet/Double-ring infiltrometer)</a><a href="../plate-load/">Plate load test (PLT)</a><a href="../field-permeability/">Field permeability test (Lefranc/Lugeon)</a><a href="../field-vane-shear/">Field vane shear test (VST)</a></div></div><div class="nav-item has-dd"><a href="../laboratory/" class="nav-cat-link">Laboratory</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../residual-soil-characterization/">Residual soil characterization</a><a href="../unconfined-compression/">Unconfined compression test (UCS)</a><a href="../oedometer-consolidation/">Oedometer consolidation test</a><a href="../direct-shear/">Direct shear test</a><a href="../standard-modified/">Proctor test (Standard or Modified)</a><a href="../triaxial/">Triaxial test</a><a href="../soil-mechanics-study/">Soil mechanics study</a><a href="../laboratory-permeability/">Laboratory permeability test (falling/constant head)</a></div></div><div class="nav-item has-dd"><a href="../geophysics/" class="nav-cat-link">Geophysics</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../ground-penetrating-radar/">GPR (Ground Penetrating Radar) survey</a><a href="../hvsr-microtremor-survey/">HVSR microtremor survey (Nakamura method)</a><a href="../electrical-resistivity-ves/">Electrical resistivity / VES (Vertical Electrical Sounding)</a></div></div><div class="nav-item has-dd"><a href="../foundations/" class="nav-cat-link">Foundations</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../foundations-fill/">Foundations on fill (analysis)</a><a href="../shallow-foundation-design/">Shallow foundation design</a><a href="../pile-foundation-design/">Pile foundation design</a><a href="../driven-pile-design/">Driven pile design</a><a href="../collapsible-soil-evaluation/">Collapsible soil evaluation</a></div></div><div class="nav-item has-dd"><a href="../slopes-walls/" class="nav-cat-link">Slopes & Walls</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../slope-stability-analysis/">Slope stability analysis</a><a href="../debris-flow-analysis/">Debris flow analysis</a><a href="../geocell-design/">Geocell design</a><a href="../active-passive-anchor-design/">Active/passive anchor design</a><a href="../slope-stabilization-design/">Slope stabilization design</a><a href="../retaining-wall-design/">Retaining wall design</a><a href="../diaphragm-wall-design/">Diaphragm wall design</a><a href="../sheet-pile-wall-design/">Sheet pile wall design</a><a href="../landslide-assessment/">Landslide assessment</a><a href="../geotechnical-slope-monitoring/">Geotechnical slope monitoring (monthly)</a></div></div><div class="nav-item has-dd"><a href="../ground-improvement/" class="nav-cat-link">Ground improvement</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../dynamic-compaction-design/">Dynamic compaction design</a><a href="../geotechnical-drainage-design/">Geotechnical drainage design</a><a href="../prefabricated-vertical-drain/">Prefabricated vertical drain (PVD) design</a><a href="../grouting-design/">Grouting design</a><a href="../jet-grouting-design/">Jet grouting design</a><a href="../preloading-surcharge-design/">Preloading with surcharge design</a><a href="../lime-cement-stabilization/">Lime and cement stabilization</a><a href="../landfill-geotechnics/">Landfill geotechnics</a><a href="../organic-soil-management/">Organic soil management</a></div></div><div class="nav-item has-dd"><a href="../roadway/" class="nav-cat-link">Roadway</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../road-subgrade-design/">Road subgrade design</a></div></div><div class="nav-item has-dd"><a href="../seismic/" class="nav-cat-link">Seismic</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../seismic-amplification-analysis/">Seismic amplification analysis</a><a href="../soil-liquefaction-analysis/">Soil liquefaction analysis</a><a href="../site-response-analysis/">Site response analysis</a></div></div>
+        <div class="nav-item has-dd"><a href="../investigation/" class="nav-cat-link">Investigation</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../exploratory-pit/">Exploratory test pit</a><a href="../cone-penetration/">CPT (Cone Penetration Test)</a><a href="../standard-penetration/">SPT (Standard Penetration Test)</a></div></div><div class="nav-item has-dd"><a href="../in-situ-testing/" class="nav-cat-link">In-Situ</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../porchet-double-ring-infiltrometer/">Infiltration test (Porchet/Double-ring infiltrometer)</a><a href="../plate-load/">Plate load test (PLT)</a><a href="../field-permeability/">Field permeability test (Lefranc/Lugeon)</a><a href="../field-vane-shear/">Field vane shear test (VST)</a></div></div><div class="nav-item has-dd"><a href="../laboratory/" class="nav-cat-link">Laboratory</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../residual-soil-characterization/">Residual soil characterization</a><a href="../unconfined-compression/">Unconfined compression test (UCS)</a><a href="../oedometer-consolidation/">Oedometer consolidation test</a><a href="../direct-shear/">Direct shear test</a><a href="../standard-modified/">Proctor test (Standard or Modified)</a><a href="../triaxial/">Triaxial test</a><a href="../soil-mechanics-study/">Soil mechanics study</a><a href="../laboratory-permeability/">Laboratory permeability test (falling/constant head)</a></div></div><div class="nav-item has-dd"><a href="../geophysics/" class="nav-cat-link">Geophysics</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../ground-penetrating-radar/">GPR (Ground Penetrating Radar) survey</a><a href="../hvsr-microtremor-survey/">HVSR microtremor survey (Nakamura method)</a><a href="../electrical-resistivity-ves/">Electrical resistivity / VES (Vertical Electrical Sounding)</a></div></div><div class="nav-item has-dd"><a href="../foundations/" class="nav-cat-link">Foundations</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../foundations-fill/">Foundations on fill (analysis)</a><a href="../shallow-foundation-design/">Shallow foundation design</a><a href="../pile-foundation-design/">Pile foundation design</a><a href="../driven-pile-design/">Driven pile design</a><a href="../collapsible-soil-evaluation/">Collapsible soil evaluation</a></div></div><div class="nav-item has-dd"><a href="../slopes-walls/" class="nav-cat-link">Slopes & Walls</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../slope-stability-analysis/">Slope stability analysis</a><a href="../debris-flow-analysis/">Debris flow analysis</a><a href="../geocell-design/">Geocell design</a><a href="../active-passive-anchor-design/">Active/passive anchor design</a><a href="../slope-stabilization-design/">Slope stabilization design</a><a href="../retaining-wall-design/">Retaining wall design</a><a href="../diaphragm-wall-design/">Diaphragm wall design</a><a href="../sheet-pile-wall-design/">Sheet pile wall design</a><a href="../landslide-assessment/">Landslide assessment</a><a href="../geotechnical-slope-monitoring/">Geotechnical slope monitoring (monthly)</a></div></div><div class="nav-item has-dd"><a href="../ground-improvement/" class="nav-cat-link">Improvement</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../dynamic-compaction-design/">Dynamic compaction design</a><a href="../geotechnical-drainage-design/">Geotechnical drainage design</a><a href="../prefabricated-vertical-drain/">Prefabricated vertical drain (PVD) design</a><a href="../grouting-design/">Grouting design</a><a href="../jet-grouting-design/">Jet grouting design</a><a href="../preloading-surcharge-design/">Preloading with surcharge design</a><a href="../lime-cement-stabilization/">Lime and cement stabilization</a><a href="../landfill-geotechnics/">Landfill geotechnics</a><a href="../organic-soil-management/">Organic soil management</a></div></div><div class="nav-item has-dd"><a href="../roadway/" class="nav-cat-link">Roadway</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../road-subgrade-design/">Road subgrade design</a></div></div><div class="nav-item has-dd"><a href="../seismic/" class="nav-cat-link">Seismic</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../seismic-amplification-analysis/">Seismic amplification analysis</a><a href="../soil-liquefaction-analysis/">Soil liquefaction analysis</a><a href="../site-response-analysis/">Site response analysis</a></div></div>
         <a class="home-btn" href="../" style="background:transparent;border:1px solid currentColor;color:inherit;padding:.5rem .9rem;font-size:.82rem;font-weight:700;text-transform:uppercase;text-decoration:none;border-radius:4px;margin-right:.5rem">HOME</a><button class="cta-btn" data-email="contact@geotechnical-engineering.biz" type="button">INQUIRE</button>
     </div>
 </nav>
 
 <header class="hero"><div class="hero-inner">
-    <div class="crumb-3fea-3fea"><a href="/">← Home</a> · In-Situ Testing</div>
+    <div class="crumb-3fea-3fea"><a href="/">← Home</a> · In-Situ</div>
     <h1>Field Permeability Test (Lefranc / Lugeon) – Liverpool</h1>
     <p class="together">Together, we solve the challenges of tomorrow.</p>
     <a class="hero-cta" href="#main-content">SEE MORE →</a>
@@ -191,6 +208,7 @@ img{max-width:100%!important;height:auto!important}
 <link rel="stylesheet" href="/css/leaflet-3fea.css"/>
 <script src="/js/leaflet-3fea.js"></script>
 <script>
+
 (function(){
   function init(){
     if(typeof L==='undefined'){setTimeout(init,200);return;}
@@ -198,7 +216,7 @@ img{max-width:100%!important;height:auto!important}
     if(!el)return;
     var map=L.map(el).setView([53.3933411,-2.9166389],12);
     L.tileLayer('https://{s}.tile-3fea.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
-    L.marker([53.3933411,-2.9166389]).addTo(map).bindPopup("Liverpool").openPopup();
+    L.marker([53.3933411,-2.9166389],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(map).bindPopup("Liverpool").openPopup();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();
@@ -218,7 +236,7 @@ img{max-width:100%!important;height:auto!important}
           L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",{
             attribution:"&copy; OpenStreetMap contributors &copy; CARTO",maxZoom:19,subdomains:"abcd"
           }).addTo(m);
-          L.marker([53.3933411,-2.9166389]).addTo(m).bindPopup("Liverpool");
+          L.marker([53.3933411,-2.9166389],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(m).bindPopup("Liverpool");
         })();
         </script>
         <div style="margin-top:.5rem;font-size:.78rem;color:#888;text-align:center">
