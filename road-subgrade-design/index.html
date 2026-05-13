@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -186,7 +222,7 @@ header.hero, .hero { position: relative !important; }
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
 <p>BS 5930:2015 — Code of practice for ground investigations, BS EN 1997-1:2004 (Eurocode 7) — Geotechnical design, BS 1377-4:1990 — Methods of test for soils: Compaction-related tests, TRRL Report LR 1132 — Road Note 31: Guide to the structural design of pavements</p></section>
 
-<section class="section"><h2>Common questions</h2><details><summary>What is the typical CBR value for Liverpool's glacial till?</summary><p>Glacial till in Liverpool typically yields soaked CBR values between 3% and 8% in its natural state. After compaction at optimum moisture content, values can reach 10–12%, but for principal roads requiring 15% CBR, lime or cement stabilisation is usually necessary.</p></details><details><summary>How much does a road subgrade design study cost in Liverpool?</summary><p>For a standard road project in Liverpool, expect costs between £810 and £2,200 depending on site area, number of CBR tests needed, and laboratory work. This includes DCP surveys, soil classification, compaction tests, and a design report with stabilisation recommendations if required.</p></details><details><summary>Why is soaked CBR testing important for Liverpool roads?</summary><p>Liverpool receives over 800 mm of rain annually with high winter groundwater tables. Soaked CBR testing (4-day soak) replicates the worst-case moisture conditions that the subgrade will experience during its service life, ensuring the pavement design is conservative enough to prevent early failure.</p></details><details><summary>What is the difference between in-situ and laboratory CBR tests?</summary><p>In-situ CBR tests measure the subgrade strength directly in the field at natural moisture content, while laboratory CBR tests are performed on compacted samples at controlled moisture and density. For Liverpool's road subgrade design, we use both: in-situ for spot checks during construction, and laboratory soaked CBR for design values.</p></details></section>
+<section class="section"><h2>Common questions</h2><details><summary>What is the typical CBR value for Liverpool's glacial till?</summary><p>Glacial till in Liverpool typically yields soaked CBR values between 3% and 8% in its natural state. After compaction at optimum moisture content, values can reach 10–12%, but for principal roads requiring 15% CBR, lime or cement stabilisation is usually necessary.</p></details><details><summary>How much does a road subgrade design study cost in Liverpool?</summary><p>For a standard road project in Liverpool, expect costs between £810 and £2,200 depending on site area, number of CBR tests needed, and <a href="/laboratory/">laboratory</a> work. This includes DCP surveys, soil classification, compaction tests, and a design report with stabilisation recommendations if required.</p></details><details><summary>Why is soaked CBR testing important for Liverpool roads?</summary><p>Liverpool receives over 800 mm of rain annually with high winter groundwater tables. Soaked CBR testing (4-day soak) replicates the worst-case moisture conditions that the subgrade will experience during its service life, ensuring the pavement design is conservative enough to prevent early failure.</p></details><details><summary>What is the difference between in-situ and laboratory CBR tests?</summary><p>In-situ CBR tests measure the subgrade strength directly in the field at natural moisture content, while laboratory CBR tests are performed on compacted samples at controlled moisture and density. For Liverpool's road subgrade design, we use both: in-situ for spot checks during construction, and laboratory soaked CBR for design values.</p></details></section>
 
 
 

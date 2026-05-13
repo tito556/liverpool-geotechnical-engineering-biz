@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -180,6 +216,8 @@ header.hero, .hero { position: relative !important; }
           <div class="sub-svc"><div class="sub-svc-num" style="color:#404040;font-weight:700;font-size:.85rem;letter-spacing:.1em">01</div><h3 style="color:#0A0A0A;font-size:1.1rem;margin:.3rem 0 .5rem">Standard VST Profiling (Borehole-based)</h3><p style="color:#333;line-height:1.65;font-size:.93rem">Vane shear tests at 1.0 m intervals within NX-size boreholes, including peak and remoulded torque measurement. Suitable for embankment design, slope stability, and foundation bearing capacity assessments in Liverpool's soft clay deposits. Results reported with full rod friction correction and sensitivity ratio.</p></div><div class="sub-svc"><div class="sub-svc-num" style="color:#404040;font-weight:700;font-size:.85rem;letter-spacing:.1em">02</div><h3 style="color:#0A0A0A;font-size:1.1rem;margin:.3rem 0 .5rem">High-Resolution VST for Sensitive Clays</h3><p style="color:#333;line-height:1.65;font-size:.93rem">Extended vane geometry (130 mm × 65 mm) and slower rotation rates (6°/min) for very soft clays with cu < 20 kPa. Includes cyclic vane testing to evaluate strength loss under repeated loading, critical for port infrastructure and quay walls in the Liverpool Docks area.</p></div><div class="sub-svc"><div class="sub-svc-num" style="color:#404040;font-weight:700;font-size:.85rem;letter-spacing:.1em">03</div><h3 style="color:#0A0A0A;font-size:1.1rem;margin:.3rem 0 .5rem">VST for Slope Stability and Landslide Assessment</h3><p style="color:#333;line-height:1.65;font-size:.93rem">Targeted vane tests along suspected shear surfaces in natural slopes or cuttings. Combines peak and remoulded strength data with inclinometer monitoring to back-analyse failure mechanisms. Ideal for the weathered glacial till slopes found in parts of Woolton and Childwall.</p></div>
         </div>
       </div>
+<section class="block" style="padding:1.5rem"><div style="max-width:1200px;margin:0 auto"><p style="margin-top:0">This service complements our <a href="/laboratory/">laboratory testing</a> work for a complete project analysis.</p></div></section>
+
     </section>
 
 <section class="section"><h2>Reference standards</h2>

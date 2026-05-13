@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -186,7 +222,7 @@ header.hero, .hero { position: relative !important; }
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
 <p>BS 5930:2015 – Code of practice for ground investigations, Eurocode 7 (EN 1997-1:2004) – Geotechnical design, BS EN 1997-2:2007 – Ground investigation and testing, CIRIA C760 – Guidance on the design of drainage systems</p></section>
 
-<section class="section"><h2>Common questions</h2><details><summary>What is geotechnical drainage design and why does Liverpool need it?</summary><p>It is the design of subsurface drainage systems to control groundwater, relieve pore pressure, and prevent water damage to foundations, retaining walls, and slopes. Liverpool's glacial till and high water table make it essential for any basement or deep excavation.</p></details><details><summary>What standards govern drainage design in Liverpool?</summary><p>The primary standards are BS 5930 for ground investigation, Eurocode 7 for geotechnical design, and CIRIA C760 for drainage specifics. Local authority guidance may also apply for surface water discharge.</p></details><details><summary>How do you determine the drainage requirements for a site?</summary><p>We start with a site investigation including trial pits, falling-head permeability tests, and groundwater monitoring. The hydraulic conductivity and seasonal water table fluctuations dictate the drain spacing, depth, and discharge method.</p></details><details><summary>How much does geotechnical drainage design cost in Liverpool?</summary><p>For a typical residential or small commercial site, the design fee ranges between £690 and £1,930 depending on complexity, site area, and the level of investigation required. A full design with construction support is at the upper end.</p></details><details><summary>Can drainage design prevent slope failure in Liverpool?</summary><p>Yes. A properly designed drainage system can lower the phreatic surface below the critical failure plane, increasing the factor of safety by 0.3 to 0.5. Combined with slope geometry and soil strength, it is one of the most cost-effective mitigation measures.</p></details></section>
+<section class="section"><h2>Common questions</h2><details><summary>What is geotechnical drainage design and why does Liverpool need it?</summary><p>It is the design of subsurface drainage systems to control groundwater, relieve pore pressure, and prevent water damage to <a href="/foundations/">foundations</a>, retaining walls, and slopes. Liverpool's glacial till and high water table make it essential for any basement or deep excavation.</p></details><details><summary>What standards govern drainage design in Liverpool?</summary><p>The primary standards are BS 5930 for ground investigation, Eurocode 7 for geotechnical design, and CIRIA C760 for drainage specifics. Local authority guidance may also apply for surface water discharge.</p></details><details><summary>How do you determine the drainage requirements for a site?</summary><p>We start with a site investigation including trial pits, falling-head permeability tests, and groundwater monitoring. The hydraulic conductivity and seasonal water table fluctuations dictate the drain spacing, depth, and discharge method.</p></details><details><summary>How much does geotechnical drainage design cost in Liverpool?</summary><p>For a typical residential or small commercial site, the design fee ranges between £690 and £1,930 depending on complexity, site area, and the level of investigation required. A full design with construction support is at the upper end.</p></details><details><summary>Can drainage design prevent slope failure in Liverpool?</summary><p>Yes. A properly designed drainage system can lower the phreatic surface below the critical failure plane, increasing the factor of safety by 0.3 to 0.5. Combined with slope geometry and soil strength, it is one of the most cost-effective mitigation measures.</p></details></section>
 
 
 

@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -184,7 +220,7 @@ header.hero, .hero { position: relative !important; }
 
 <section class="section"><h2>Reference standards</h2>
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
-<p>BS EN 1998-5:2004 (Eurocode 8 – Seismic Design, UK National Annex), NEHRP Recommended Seismic Provisions (2015), ASCE 7-16 Section 11.4 – Site Class and Amplification Factors, BS 5930:2015 – Code of Practice for Ground Investigations</p></section>
+<p>BS EN 1998-5:2004 (Eurocode 8 – <a href="/seismic/">Seismic</a> Design, UK National Annex), NEHRP Recommended Seismic Provisions (2015), ASCE 7-16 Section 11.4 – Site Class and Amplification Factors, BS 5930:2015 – Code of Practice for Ground Investigations</p></section>
 
 <section class="section"><h2>Common questions</h2><details><summary>How much does a seismic amplification analysis cost in Liverpool?</summary><p>For a typical residential or mid-rise commercial project in Liverpool, the seismic amplification <a href="../foundations-fill/" data-interlink="1">analysis</a> ranges between £800 and £1,870. This covers the field survey (MASW or ReMi), laboratory correlation, and the site response report. Complex sites with multiple soil layers or deep alluvial deposits may require additional borehole data, which can increase the cost toward the upper end of the range.</p></details><details><summary>What is the difference between VS30 and site class in the UK context?</summary><p>VS30 is the average shear wave velocity in the top 30 metres of the ground profile, measured directly from surface wave surveys or downhole logging. The site class (A–E in Eurocode 8) is a simplified category derived from VS30 values. In Liverpool, the glacial till typically yields VS30 of 360–500 m/s (Class C), while soft alluvial zones along the Mersey fall in Class D (180–360 m/s). The site class directly controls the amplification factor applied in structural design, but a site-specific <a href="../foundations-fill/" data-interlink="1">analysis</a> replaces those generic factors with custom ones.</p></details><details><summary>When is a site-specific seismic amplification analysis mandatory in Liverpool?</summary><p>It is mandatory for all structures classified as Consequence Class 2b and above under the UK Building Regulations (Approved Document A), which includes hospitals, schools, high-rise residential towers, and essential infrastructure. Even for Class 2a buildings (offices, retail), the structural engineer may request a site-specific <a href="../foundations-fill/" data-interlink="1">analysis</a> if the ground profile is variable — which it often is in Liverpool due to the glacial till/alluvial interface and extensive made ground from historical industrial use.</p></details></section>
 

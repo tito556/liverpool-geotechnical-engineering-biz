@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -186,7 +222,7 @@ header.hero, .hero { position: relative !important; }
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
 <p>NCEER 2001 (Youd & Idriss SPT-based method), BS 5930:2015 (Site investigation code of practice), Eurocode 7 – EN 1997-2:2007 (Geotechnical design – ground investigation), BS EN ISO 22476-3 (Standard test method for SPT)</p></section>
 
-<section class="section"><h2>Common questions</h2><details><summary>What is soil liquefaction and why does it matter in Liverpool?</summary><p>Soil liquefaction occurs when loose, saturated sand loses strength during cyclic loading (earthquake or heavy machinery vibration). In Liverpool, the Mersey alluvial deposits and reclaimed docklands contain layers susceptible to pore pressure buildup. If triggered, buildings can tilt or sink unevenly. Our <a href="../foundations-fill/" data-interlink="1">analysis</a> identifies those layers and calculates the factor of safety.</p></details><details><summary>How much does a liquefaction analysis cost in Liverpool?</summary><p>A standard liquefaction study for a medium-sized development (4–6 boreholes, SPT, lab tests) typically ranges between £2,230 and £3,500. The final price depends on site access, number of layers tested, and whether cyclic <a href="../triaxial/" data-interlink="1">triaxial tests</a> are required.</p></details><details><summary>Which standards do you follow for liquefaction assessment?</summary><p>We apply the NCEER 2001 workshop procedures (Youd & Idriss) as the primary framework, supported by BS 5930:2015 for site investigation and Eurocode 7 (EN 1997-2) for design. All SPT equipment is calibrated per BS EN ISO 22476-3.</p></details><details><summary>What Improvement methods work after liquefaction risk is found?</summary><p>Common solutions include deep compaction (vibroflotation), stone columns, and jet grouting. For Liverpool sites with high water tables, we often recommend prefabricated vertical drains combined with surcharge to densify the sand before construction. Each method is selected based on target CRR and site constraints.</p></details></section>
+<section class="section"><h2>Common questions</h2><details><summary>What is soil liquefaction and why does it matter in Liverpool?</summary><p>Soil liquefaction occurs when loose, saturated sand loses strength during cyclic loading (earthquake or heavy machinery vibration). In Liverpool, the Mersey alluvial deposits and reclaimed docklands contain layers susceptible to pore pressure buildup. If triggered, buildings can tilt or sink unevenly. Our <a href="../foundations-fill/" data-interlink="1">analysis</a> identifies those layers and calculates the factor of safety.</p></details><details><summary>How much does a liquefaction analysis cost in Liverpool?</summary><p>A standard liquefaction study for a medium-sized development (4–6 boreholes, SPT, lab tests) typically ranges between £2,230 and £3,500. The final price depends on site access, number of layers tested, and whether cyclic <a href="../triaxial/" data-interlink="1">triaxial tests</a> are required.</p></details><details><summary>Which standards do you follow for liquefaction assessment?</summary><p>We apply the NCEER 2001 workshop procedures (Youd & Idriss) as the primary framework, supported by BS 5930:2015 for site investigation and Eurocode 7 (EN 1997-2) for design. All SPT equipment is calibrated per BS EN ISO 22476-3.</p></details><details><summary>What Improvement methods work after liquefaction risk is found?</summary><p>Common solutions include deep compaction (vibroflotation), stone columns, and jet grouting. For Liverpool sites with high water tables, we often recommend <a href="/prefabricated-vertical-drain/">prefabricated vertical drains</a> combined with surcharge to densify the sand before construction. Each method is selected based on target CRR and site constraints.</p></details></section>
 
 
 

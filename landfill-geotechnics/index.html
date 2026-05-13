@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -186,7 +222,7 @@ header.hero, .hero { position: relative !important; }
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
 <p>BS 5930:2015 – Code of practice for ground investigations, BS EN 1997-1:2004 (Eurocode 7) – Geotechnical design, Environment Agency LFTGN 04 – Landfill gas monitoring guidance</p></section>
 
-<section class="section"><h2>Common questions</h2><details><summary>What does landfill geotechnics involve for a site in Liverpool?</summary><p>It covers investigation of waste composition, foundation soils and groundwater; settlement <a href="../foundations-fill/" data-interlink="1">analysis</a>; slope stability of containment bunds; and design of gas/leachate control systems. Work follows BS 5930 and Eurocode 7.</p></details><details><summary>How much does a landfill geotechnical investigation cost in Liverpool?</summary><p>Typical costs range between £1,620 and £6,160 depending on borehole depth, number of monitoring wells and laboratory testing volume. A small site with 4 boreholes to 10 m depth sits at the lower end; a large former landfill with gas wells exceeds the upper figure.</p></details><details><summary>How long does settlement take in Liverpool's landfill sites?</summary><p>Primary settlement from waste compression usually completes within 2–5 years under cap load. Secondary settlement (due to creep and biodegradation) can continue for 15–25 years. We model both stages using Casagrande's method and site-specific compression indices.</p></details></section>
+<section class="section"><h2>Common questions</h2><details><summary>What does landfill geotechnics involve for a site in Liverpool?</summary><p>It covers investigation of waste composition, foundation soils and groundwater; settlement <a href="../foundations-fill/" data-interlink="1">analysis</a>; slope stability of containment bunds; and design of gas/leachate control systems. Work follows BS 5930 and Eurocode 7.</p></details><details><summary>How much does a landfill geotechnical investigation cost in Liverpool?</summary><p>Typical costs range between £1,620 and £6,160 depending on borehole depth, number of monitoring wells and <a href="/laboratory/">laboratory</a> testing volume. A small site with 4 boreholes to 10 m depth sits at the lower end; a large former landfill with gas wells exceeds the upper figure.</p></details><details><summary>How long does settlement take in Liverpool's landfill sites?</summary><p>Primary settlement from waste compression usually completes within 2–5 years under cap load. Secondary settlement (due to creep and biodegradation) can continue for 15–25 years. We model both stages using Casagrande's method and site-specific compression indices.</p></details></section>
 
 
 
